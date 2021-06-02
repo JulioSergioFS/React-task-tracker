@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Header from './component/Header.js';
 import Task from './component/Tasks.js';
+import AddTask from './component/AddTask.js';
 
 function App() {
   const [tasks, setTask] = useState([
@@ -39,6 +40,7 @@ function App() {
   return (
     <div className="container">
       <Header />
+      <AddTask />
       {tasks.length > 0 ? (
         <Task tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} />
       ) : (
